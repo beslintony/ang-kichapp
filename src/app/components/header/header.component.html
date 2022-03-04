@@ -1,0 +1,43 @@
+<header class="header" [ngClass]="scroll ? 'shrink' : ''">
+  <div class="container">
+    <div class="header__logo">
+      <a [routerLink]="">
+        <img src="assets/images/logo0.png" alt="logo" />
+      </a>
+    </div>
+    <div class="header__menu">
+      <div class="header__menu__mobile-toggle" (click)="clickEvent()">
+        <fa-icon [icon]="faBars"></fa-icon>
+      </div>
+      <div class="header__menu__left" [ngClass]="status ? 'active' : ''">
+        <div class="header__menu__left__close" (click)="clickEvent()">
+          <fa-icon [icon]="faChevronLeft"></fa-icon>
+        </div>
+        <div
+          class="header__menu__item header__menu__left__item"
+          *ngFor="let nav of mainNav"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+          (click)="clickEvent()"
+        >
+          <a [routerLink]="nav.path">
+            <span>{{ nav.display }}</span>
+          </a>
+        </div>
+      </div>
+      <div class="header__menu__right">
+        <div class="header__menu__item header__menu__right__item">
+          <fa-icon [icon]="faSearch"></fa-icon>
+        </div>
+        <div class="header__menu__item header__menu__right__item">
+          <a routerLink="/cart">
+            <fa-icon [icon]="faShoppingBag"></fa-icon>
+          </a>
+        </div>
+        <div class="header__menu__item header__menu__right__item">
+          <fa-icon [icon]="faUser"></fa-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
