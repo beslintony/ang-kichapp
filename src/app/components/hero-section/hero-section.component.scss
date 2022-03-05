@@ -1,0 +1,155 @@
+@import "../../../styles";
+
+.hero-section {
+  height: 100%;
+
+  background-image: linear-gradient(
+    to right top,
+    #d16ba5,
+    #c777b9,
+    #ba83ca,
+    #aa8fd8,
+    #9a9ae1,
+    #8aa7ec,
+    #79b3f4,
+    #69bff8,
+    #52cffe,
+    #41dfff,
+    #46eefa,
+    #5ffbf1
+  );
+  width: 100%;
+  border-radius: 0.5rem;
+
+  color: $txt-white;
+  position: relative;
+
+  // margin-top: calc(#{$header-mobile-height} * -1);
+
+  @include respond-to("sm") {
+    border-radius: 2rem;
+  }
+
+  &__container {
+    border-radius: 2rem;
+    margin-left: 0;
+    width: 100%;
+
+    @include respond-to("md") {
+      // 21
+    }
+  }
+  &__left {
+    margin-left: 5rem;
+    padding-bottom: 2rem;
+
+    h1 {
+      font-family: "M PLUS Rounded 1c", sans-serif;
+
+      font-size: 2.5rem;
+      line-height: 0.5;
+      font-weight: 700;
+
+      padding-bottom: 1rem;
+
+      @include respond-to("xs") {
+        font-size: 5rem;
+        line-height: 0.5;
+        padding-bottom: 1.5rem;
+      }
+      @include respond-to("sm") {
+        font-size: 7rem;
+        line-height: 0.5;
+        padding-bottom: 2.5rem;
+      }
+      @include respond-to("md") {
+        font-size: 8rem;
+        line-height: 0.5;
+        padding-bottom: 2.5rem;
+      }
+    }
+
+    p {
+      font-size: 0.75rem;
+      margin-bottom: 2rem;
+      text-transform: uppercase;
+      font-family: "Roboto", sans-serif;
+
+      @include respond-to("xs") {
+        font-size: 1.25rem;
+        margin-bottom: 4.5rem;
+      }
+
+      @include respond-to("md") {
+        font-size: 2rem;
+        margin-bottom: 6rem;
+      }
+    }
+
+    .btn {
+      display: inline-block;
+      background: black;
+      color: whitesmoke;
+
+      padding: 1.2rem 2.5rem;
+
+      font-weight: 500;
+      border-radius: 0.5rem;
+      font-size: 0.8rem;
+
+      @include respond-to("md") {
+        padding: 1.5rem 6rem;
+
+        font-weight: 500;
+        border-radius: 1rem;
+        font-size: 1.8rem;
+      }
+    }
+  }
+
+  &__subtitle {
+    padding-top: 1rem;
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 2rem;
+
+    @include respond-to("sm") {
+      font-size: 1.2rem;
+      margin-bottom: 2.5rem;
+    }
+    @include respond-to("md") {
+      font-size: 1.8rem;
+      margin-bottom: 4rem;
+    }
+  }
+  &__right {
+    img {
+      width: 10rem;
+      // @include responsive-ratio (16,10);
+      object-fit: contain;
+      height: 100%;
+
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      padding-bottom: 0.5rem;
+
+      @include respond-to("xs") {
+        width: 25rem;
+
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+
+      @include respond-to("md") {
+        width: 40rem;
+
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+    }
+  }
+}
