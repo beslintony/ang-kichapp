@@ -10,6 +10,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { HomeComponent } from './pages/home/home.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
+import { ProductsComponent } from './pages/products/products.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { HeroSectionComponent } from './components/hero-section/hero-section.com
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    HeroSectionComponent
+    HeroSectionComponent,
+    ProductsComponent
   ],
   imports: [
     BrowserModule,

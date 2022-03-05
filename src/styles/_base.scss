@@ -29,7 +29,7 @@
   padding: 0;
   margin: 0;
   -webkit-tap-highlight-color: transparent;
-  user-select: none;
+  -webkit-user-select: none;
 }
 
 /* Reapply the pointer cursor for anchor tags */
@@ -124,7 +124,7 @@ a:hover {
 
 @each $val in $numbers {
   .grid-col-lg-#{$val} {
-    @include respond-to("lg") {
+    @include respond-to-max("lg") {
       grid-template-columns: repeat($val, 1fr);
     }
   }
@@ -132,7 +132,7 @@ a:hover {
 
 @each $val in $numbers {
   .grid-col-md-#{$val} {
-    @include respond-to("md") {
+    @include respond-to-max("md") {
       grid-template-columns: repeat($val, 1fr);
     }
   }
@@ -140,7 +140,15 @@ a:hover {
 
 @each $val in $numbers {
   .grid-col-sm-#{$val} {
-    @include respond-to("sm") {
+    @include respond-to-max("sm") {
+      grid-template-columns: repeat($val, 1fr);
+    }
+  }
+}
+
+@each $val in $numbers {
+  .grid-col-xs-#{$val} {
+    @include respond-to-max("xs") {
       grid-template-columns: repeat($val, 1fr);
     }
   }
