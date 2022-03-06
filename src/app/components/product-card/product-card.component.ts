@@ -19,7 +19,7 @@ export class ProductCardComponent implements OnInit {
 
   @Output() btnClick = new EventEmitter();
 
-  constructor(private addToCartMsg: CartService) {}
+  constructor(private cartService: CartService) {}
 
   ngOnInit(): void {}
 
@@ -27,6 +27,8 @@ export class ProductCardComponent implements OnInit {
     num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 
   addToCart() {
-    this.addToCartMsg.sendAddToCart(this.productItem);
+    this.cartService.addProductToCart(this.productItem).subscribe(() => {
+      this.cartService.sendAddToCart(this.productItem);
+    });
   }
 }

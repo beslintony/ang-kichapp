@@ -1,53 +1,36 @@
 import { Component, OnInit } from '@angular/core';
+import { CartItem } from 'src/app/models/cart-item';
 import { Product } from 'src/app/models/product';
 import { CartService } from 'src/app/services/cart.service';
-
-type cart = {
-  id?: number;
-  productId: number;
-  name: string;
-  price: number;
-  img: string;
-  quantity: number;
-};
 @Component({
   selector: 'app-cart',
   templateUrl: './cart.component.html',
   styleUrls: ['./cart.component.scss'],
 })
 export class CartComponent implements OnInit {
-  cartItems: cart[] = [];
+  cartItems: CartItem[] = [];
 
   cartTotal = 0;
   quantity = 1;
 
-  constructor(private addToCartMsg: CartService) {}
+  constructor(private cartService: CartService) {}
 
   ngOnInit(): void {
-    this.addToCartMsg.getCartItem().subscribe((product: Product) => {
-      this.addProductToCart(product);
+    this.handleSubscription();
+    this.loadCartItems();
+  }
+
+  handleSubscription() {
+    this.cartService.getCartItem().subscribe((product: Product) => {
+      this.loadCartItems();
     });
   }
 
-  addProductToCart(product: Product) {
-    let productExists = false;
-
-    for (let item in this.cartItems) {
-      if (this.cartItems[item].productId === product.id) {
-        this.cartItems[item].quantity++;
-        productExists = true;
-        break;
-      }
-    }
-    if (!productExists) {
-      this.cartItems.push({
-        productId: product.id,
-        name: product.name,
-        img: product.img,
-        price: product.price,
-        quantity: this.quantity,
-      });
-    }
+  loadCartItems() {
+    this.cartService.getCartItems().subscribe((items: CartItem[]) => {
+      this.cartItems = items;
+      this.calculateCartTotal();
+    });
   }
 
   calculateCartTotal() {
