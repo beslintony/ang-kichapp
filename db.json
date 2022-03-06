@@ -1,0 +1,72 @@
+{
+    "products": [{
+            "id": 1,
+            "name": "Choc Dress Premium",
+            "description": "This is the best product that is available in the history of mankind. buy it now and enjoy. Limited time offer. Buy Now. Now Itself!!!!!!",
+            "price": 120,
+            "img": "https://cdn.shopify.com/s/files/1/0070/7032/files/trending-products_c8d0d15c-9afc-47e3-9ba2-f7bad0505b9b.png?format=jpg&quality=90&v=1614559651&width=1024"
+        },
+
+        {
+            "id": 2,
+            "name": "A message day cel",
+            "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+            "price": 120,
+            "img": "https://www.cloudways.com/blog/wp-content/uploads/Bluetooth-Speaker-526x1024.jpg"
+        },
+
+        {
+            "id": 3,
+            "name": "Vald",
+            "description": "This is the best product that is available in the history of mankind. buy it now and enjoy. Limited time offer. Buy Now. Now Itself!!!!!!",
+            "price": 120,
+            "img": "https://www.cloudways.com/blog/wp-content/uploads/Smart-Watch-768x836.jpg"
+        },
+
+        {
+            "id": 4,
+            "name": "Dress Premium",
+            "description": "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?",
+            "price": 120,
+            "img": "https://www.cloudways.com/blog/wp-content/uploads/Neck-Massager-768x878.jpg"
+        },
+
+        {
+            "id": 5,
+            "name": "Cdum",
+            "description": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+            "price": 120,
+            "img": "https://www.cloudways.com/blog/wp-content/uploads/Vegetable-Chopper-768x799.jpg"
+        },
+
+        {
+            "id": 6,
+            "name": "Chocs",
+            "description": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
+            "price": 120,
+            "img": "https://www.cloudways.com/blog/wp-content/uploads/Facial-Cleanser-724x1024.jpg"
+        },
+
+        {
+            "id": 7,
+            "name": "Premium material polyfills",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+            "price": 120,
+            "img": "https://www.cloudways.com/blog/wp-content/uploads/Back-Cushion-768x768.jpg"
+        }
+    ],
+    "carts": [],
+    "posts": [{
+        "id": 1,
+        "title": "json-server",
+        "author": "typicode"
+    }],
+    "comments": [{
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+    }],
+    "profile": {
+        "name": "typicode"
+    }
+}
