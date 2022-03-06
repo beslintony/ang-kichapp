@@ -3,7 +3,8 @@ import { Product } from 'src/app/models/product';
 import { CartService } from 'src/app/services/cart.service';
 
 type cart = {
-  id: number;
+  id?: number;
+  productId: number;
   name: string;
   price: number;
   img: string;
@@ -32,7 +33,7 @@ export class CartComponent implements OnInit {
     let productExists = false;
 
     for (let item in this.cartItems) {
-      if (this.cartItems[item].id === product.id) {
+      if (this.cartItems[item].productId === product.id) {
         this.cartItems[item].quantity++;
         productExists = true;
         break;
@@ -40,7 +41,7 @@ export class CartComponent implements OnInit {
     }
     if (!productExists) {
       this.cartItems.push({
-        id: product.id,
+        productId: product.id,
         name: product.name,
         img: product.img,
         price: product.price,
