@@ -31,12 +31,8 @@ export class HeaderComponent implements OnInit {
       path: '/',
     },
     {
-      display: 'Catalogs',
-      path: '/catalog',
-    },
-    {
-      display: 'Accessories',
-      path: '/accessories',
+      display: 'Shop',
+      path: '/shop',
     },
     {
       display: 'Contact',
