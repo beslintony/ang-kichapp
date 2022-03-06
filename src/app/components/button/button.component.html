@@ -1,1 +1,12 @@
-<p>button works!</p>
+<button
+  class="{ btn  bg-{{ backgroundColor }} btn-{{ size }} }"
+  (click)="onClick()"
+  [ngClass]="{ 'btn-animate': animate }"
+>
+  <span class="btn__txt">
+    {{ text }}
+  </span>
+  <span *ngIf="icon" class="btn__icon">
+    <fa-icon [icon]="icon"></fa-icon>
+  </span>
+</button>

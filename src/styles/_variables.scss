@@ -55,7 +55,7 @@ $max-breakpoints: (
     max-width: 992px,
   ),
   "lg": (
-    max-width: 1200px,
+    min-width: 993px,
   ),
   "xl": (
     max-width: 1400px,
