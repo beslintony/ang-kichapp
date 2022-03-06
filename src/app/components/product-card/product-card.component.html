@@ -1,24 +1,17 @@
 <div class="product-card">
-  <div class="product-card__image">
-    <img [src]="img" alt="" />
-  </div>
-  <h3 class="product-card__name">{{ productName }}</h3>
-  <div class="product-card__price">
-    <span class="product-card__price__currency"> € </span>
-    <span class="product-card__price__amount">
-      {{ numberWithCommas(productPrice) }}
+    <div class="product-card__image">
+        <img [src]="productItem.img" alt="" />
+    </div>
+    <h3 class="product-card__name">{{ productItem.name }}</h3>
+    <div class="product-card__price">
+        <span class="product-card__price__currency"> € </span>
+        <span class="product-card__price__amount">
+      {{ numberWithCommas(productItem.price) }}
     </span>
-  </div>
-  <div class="product-card__btn">
-    <app-button
-      [size]="size"
-      [icon]="icon"
-      [animate]="true"
-      [backgroundColor]="color"
-      [text]="text"
-      (btnClick)="addToCart()"
-    >
-      Add to Cart
-    </app-button>
-  </div>
+    </div>
+    <div class="product-card__btn">
+        <app-button [size]="size" [icon]="icon" [animate]="true" [backgroundColor]="color" [text]="text" (btnClick)="addToCart()">
+            Add to Cart
+        </app-button>
+    </div>
 </div>

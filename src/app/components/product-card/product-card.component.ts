@@ -1,6 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { Product } from 'src/app/models/product';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-product-card',
@@ -13,18 +15,18 @@ export class ProductCardComponent implements OnInit {
   @Input() color? = 'orange';
   @Input() text? = 'Add To Cart';
 
-  @Input() productName!:string;
-  @Input() productPrice!: number;
-  @Input() img!: string;
+  @Input() productItem!: Product;
 
-  constructor() {}
+  @Output() btnClick = new EventEmitter();
+
+  constructor(private addToCartMsg: CartService) {}
 
   ngOnInit(): void {}
 
-  addToCart(): void {
-    console.log('clicked');
-  }
-
   numberWithCommas = (num: number) =>
     num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+
+  addToCart() {
+    this.addToCartMsg.sendAddToCart(this.productItem);
+  }
 }

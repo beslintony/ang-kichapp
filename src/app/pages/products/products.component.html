@@ -5,9 +5,11 @@
     <app-section-body>
         <app-grid [lg]="4" [md]="4" [sm]="2" [xs]="2" [gap]="20">
             <div *ngFor="let product of productList">
-                {{ log(productList) }}
-                <app-product-card [productName]="product.name" [productPrice]="product.price" [img]="product.img"></app-product-card>
+                <!-- {{ log(productList) }} -->
+                <app-product-card [productItem]="product"></app-product-card>
             </div>
         </app-grid>
     </app-section-body>
 </app-section>
+
+<app-cart></app-cart>
