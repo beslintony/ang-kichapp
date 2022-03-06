@@ -15,6 +15,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { SectionComponent } from './components/section/section.component';
 import { SectionTitleComponent } from './components/section-title/section-title.component';
 import { SectionBodyComponent } from './components/section-body/section-body.component';
+import { CartComponent } from './pages/cart/cart.component';
+import { CartItemComponent } from './components/cart-item/cart-item.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { SectionBodyComponent } from './components/section-body/section-body.com
     ProductCardComponent,
     SectionComponent,
     SectionTitleComponent,
-    SectionBodyComponent
+    SectionBodyComponent,
+    CartComponent,
+    CartItemComponent
   ],
   imports: [
     BrowserModule,

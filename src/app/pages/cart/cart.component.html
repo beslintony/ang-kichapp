@@ -1,0 +1,33 @@
+<app-section-title>
+    <p>Cart</p>
+</app-section-title>
+<app-section-body>
+    <div class="cart">
+        <div class="cart__list">
+            <div *ngFor="let cartItem of cartItems">
+                <app-cart-item [cartItem]="cartItem"></app-cart-item>
+            </div>
+        </div>
+        <div class="cart__info">
+            <div class="cart__info__txt">
+                <p>
+                    <!-- Bạn đang có {totalProducts} sản phẩm trong giỏ hàng -->
+                </p>
+                <div class="cart__info__txt__price">
+                    <span>Total Price:</span>
+                    <span> € {{ cartTotal }} </span>
+                </div>
+            </div>
+            <div class="cart__info__btn">
+                <a routerLink="/cart">
+                    <app-button size="sm" backgroundColor="blue" text="Pay Now">
+                    </app-button>
+                </a>
+                <a routerLink="/shop">
+                    <app-button size="sm" backgroundColor="blue" text="Continue Shopping">
+                    </app-button>
+                </a>
+            </div>
+        </div>
+    </div>
+</app-section-body>

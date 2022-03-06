@@ -1,0 +1,36 @@
+<div *ngIf="!cartItem">
+    <h1>Your Cart is Empty</h1>
+</div>
+<div *ngIf="cartItem" class="cart__item">
+    <div class="cart__item__image">
+        <img [src]="cartItem.img" alt="" />
+    </div>
+    <div class="cart__item__info">
+        <div class="cart__item__info__name">
+            {{ cartItem.name }}
+            <!-- <a routerLink ={`/shop/${cartItem.id}`}>
+                {`${item.product.title} - ${cartItem.color} - ${cartItem.size}`}
+
+            </a> -->
+        </div>
+        <div class="cart__item__info__price">
+            € {{ cartItem.price }}
+        </div>
+        <div class="cart__item__info__quantity">
+            <div class="cart__item__info__quantity">
+                <div class="cart__item__info__quantity__btn">
+                    <fa-icon [icon]="faMinus"></fa-icon>
+                </div>
+                <div class="cart__item__info__quantity__input">
+                    {{ cartItem.quantity }}
+                </div>
+                <div class="cart__item__info__quantity__btn">
+                    <fa-icon [icon]="faPlus"></fa-icon>
+                </div>
+            </div>
+        </div>
+        <div class="cart__item__del">
+            <fa-icon [icon]="faTrash"></fa-icon>
+        </div>
+    </div>
+</div>
