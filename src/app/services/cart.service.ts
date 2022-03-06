@@ -22,7 +22,6 @@ export class CartService {
   }
 
   getCartItems(): Observable<CartItem[]> {
-    //TODO: Mapping the obtained result to our cart ,pipe and map
     return this.http.get<CartItem[]>(cartsUrl).pipe(
       map((result: any[]) => {
         let cartItems: CartItem[] = [];
