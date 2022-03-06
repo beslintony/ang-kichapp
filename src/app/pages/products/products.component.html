@@ -1,7 +1,13 @@
-<p>products works!</p>
-<app-grid [lg]="4" [md]="4" [sm]="2" [xs]="2" [gap]="20">
-  <app-product-card></app-product-card>
-  <app-product-card></app-product-card>
-  <app-product-card></app-product-card>
-  <app-product-card></app-product-card>
-</app-grid>
+<app-section>
+  <app-section-title>
+    <p>Featured Products</p>
+  </app-section-title>
+  <app-section-body>
+    <app-grid [lg]="4" [md]="4" [sm]="2" [xs]="2" [gap]="20">
+      <app-product-card></app-product-card>
+      <app-product-card></app-product-card>
+      <app-product-card></app-product-card>
+      <app-product-card></app-product-card>
+    </app-grid>
+  </app-section-body>
+</app-section>

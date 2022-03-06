@@ -12,6 +12,9 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeroSectionComponent } from './components/hero-section/hero-section.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ProductCardComponent } from './components/product-card/product-card.component';
+import { SectionComponent } from './components/section/section.component';
+import { SectionTitleComponent } from './components/section-title/section-title.component';
+import { SectionBodyComponent } from './components/section-body/section-body.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { ProductCardComponent } from './components/product-card/product-card.com
     HomeComponent,
     HeroSectionComponent,
     ProductsComponent,
-    ProductCardComponent
+    ProductCardComponent,
+    SectionComponent,
+    SectionTitleComponent,
+    SectionBodyComponent
   ],
   imports: [
     BrowserModule,

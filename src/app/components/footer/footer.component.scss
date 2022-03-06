@@ -1,0 +1,29 @@
+@import "../../../styles";
+
+.footer {
+  padding: 38px 0;
+  box-shadow: $box-shadow;
+  font-size: 1.1rem;
+
+  &__logo {
+    height: 5rem;
+  }
+
+  &__about {
+    p {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    font-weight: 600;
+  }
+
+  &__content {
+    p {
+      margin-bottom: 1.25rem;
+    }
+  }
+}
