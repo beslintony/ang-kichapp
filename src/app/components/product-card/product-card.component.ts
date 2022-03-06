@@ -8,15 +8,14 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./product-card.component.scss'],
 })
 export class ProductCardComponent implements OnInit {
-  @Input() icon: any = faShoppingCart;
-  size = 'sm';
-  color = 'orange';
-  text = 'Add To Cart';
+  @Input() icon?: any = faShoppingCart;
+  @Input() size? = 'sm';
+  @Input() color? = 'orange';
+  @Input() text? = 'Add To Cart';
 
-  @Input() productName?: string;
-  @Input() productPrice?: number;
-  @Input() oldPrice?: number;
-  @Input() img?: string = '/assets/images/woman-in-cart.png';
+  @Input() productName!:string;
+  @Input() productPrice!: number;
+  @Input() img!: string;
 
   constructor() {}
 

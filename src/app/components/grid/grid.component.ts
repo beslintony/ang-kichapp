@@ -6,10 +6,10 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./grid.component.scss'],
 })
 export class GridComponent implements OnInit {
-  @Input() lg?: number;
-  @Input() md?: number;
-  @Input() sm?: number;
-  @Input() xs?: number;
+  @Input() lg!: number;
+  @Input() md!: number;
+  @Input() sm!: number;
+  @Input() xs!: number;
   @Input() gap: number = 0;
 
   constructor() {}

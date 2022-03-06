@@ -4,10 +4,13 @@
   </app-section-title>
   <app-section-body>
     <app-grid [lg]="4" [md]="4" [sm]="2" [xs]="2" [gap]="20">
-      <app-product-card></app-product-card>
-      <app-product-card></app-product-card>
-      <app-product-card></app-product-card>
-      <app-product-card></app-product-card>
+      <div *ngFor="let product of productList">
+        <app-product-card
+          [productName]="product.name"
+          [productPrice]="product.price"
+          [img]="product.img"
+        ></app-product-card>
+      </div>
     </app-grid>
   </app-section-body>
 </app-section>
